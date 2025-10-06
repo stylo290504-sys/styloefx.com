@@ -111,7 +111,7 @@ const LyricsModal: React.FC<LyricsModalProps> = ({ isOpen, onClose, lyrics, titl
           </div>
 
           <div className="p-6 overflow-y-auto max-h-[calc(80vh-140px)]">
-            <p className="text-base leading-relaxed text-slate-300 whitespace-pre-line">
+            <p className="text-base leading-relaxed whitespace-pre-line text-slate-300">
               {lyrics}
             </p>
           </div>
@@ -192,7 +192,7 @@ const SongCard = ({ lyrics, title, index, instagramUrl }: SongCardProps) => {
             <h3 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
               {title}
             </h3>
-            <p className="text-sm leading-relaxed text-slate-300 whitespace-pre-line line-clamp-6">
+            <p className="text-sm leading-relaxed whitespace-pre-line text-slate-300 line-clamp-6">
               {lyrics}
             </p>
           </div>
@@ -281,7 +281,7 @@ const ParallaxBackground = () => {
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
       <motion.div
-        className="absolute w-96 h-96 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 blur-3xl"
+        className="absolute rounded-full w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 blur-3xl"
         style={{ top: '10%', left: '10%' }}
         animate={{
           x: mousePosition.x,
@@ -367,7 +367,7 @@ const Footer: React.FC = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl px-6 mx-auto space-y-8">
+      <div className="relative z-10 px-6 mx-auto space-y-8 max-w-7xl">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -380,9 +380,10 @@ const Footer: React.FC = () => {
               transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
               className="text-cyan-400"
             >
-              <Disc size={40} />
+             
             </motion.div>
             <div>
+               
               <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
                 StyloEFX
               </h3>
@@ -402,7 +403,7 @@ const Footer: React.FC = () => {
               href="https://www.youtube.com/@styloefx"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 p-3 text-slate-400 transition-all duration-300 rounded-full bg-slate-800/50 hover:text-red-500 hover:bg-slate-800 backdrop-blur-sm"
+              className="flex items-center gap-2 p-3 transition-all duration-300 rounded-full text-slate-400 bg-slate-800/50 hover:text-red-500 hover:bg-slate-800 backdrop-blur-sm"
             >
               <Youtube size={24} />
             </motion.a>
@@ -412,7 +413,7 @@ const Footer: React.FC = () => {
               href="https://www.instagram.com/styloefx"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 p-3 text-slate-400 transition-all duration-300 rounded-full bg-slate-800/50 hover:text-pink-500 hover:bg-slate-800 backdrop-blur-sm"
+              className="flex items-center gap-2 p-3 transition-all duration-300 rounded-full text-slate-400 bg-slate-800/50 hover:text-pink-500 hover:bg-slate-800 backdrop-blur-sm"
             >
               <Instagram size={24} />
             </motion.a>
@@ -551,10 +552,12 @@ export default function StyloEFX() {
               transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
               className="text-cyan-400"
             >
-              <Disc size={36} />
+            
             </motion.div>
+            <img src="public/logo.png" alt="StyloEFX Logo" className="w-12 h-12 mr-2" />
+
             <h1 className="text-3xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
-              StyloEFX
+            StyloEFX
             </h1>
           </motion.div>
 
@@ -624,7 +627,7 @@ export default function StyloEFX() {
 
       <section className="relative px-4 py-24 overflow-hidden md:py-40 md:px-6">
         <motion.div
-          className="absolute text-cyan-400/30 transform -translate-y-1/2 left-8 md:left-16 top-1/2"
+          className="absolute transform -translate-y-1/2 text-cyan-400/30 left-8 md:left-16 top-1/2"
           animate={{
             y: [0, -40, 0],
             rotate: [0, 20, -20, 0],
@@ -636,7 +639,7 @@ export default function StyloEFX() {
         </motion.div>
 
         <motion.div
-          className="absolute text-purple-400/30 transform -translate-y-1/2 right-8 md:right-16 top-1/2"
+          className="absolute transform -translate-y-1/2 text-purple-400/30 right-8 md:right-16 top-1/2"
           animate={{
             y: [0, 40, 0],
             rotate: [0, -20, 20, 0],
@@ -729,7 +732,7 @@ export default function StyloEFX() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-sm font-semibold border rounded-full text-purple-400 bg-purple-500/10 border-purple-500/20"
+            className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-sm font-semibold text-purple-400 border rounded-full bg-purple-500/10 border-purple-500/20"
           >
             <Music size={16} />
             Our Collection
@@ -824,7 +827,7 @@ export default function StyloEFX() {
                       </div>
                     </div>
 
-                    <p className="text-sm leading-relaxed text-slate-300 whitespace-pre-line line-clamp-8">
+                    <p className="text-sm leading-relaxed whitespace-pre-line text-slate-300 line-clamp-8">
                       {song.lyrics}
                     </p>
 
