@@ -554,7 +554,7 @@ export default function StyloEFX() {
             >
             
             </motion.div>
-            <img src="public/logo.png" alt="StyloEFX Logo" className="w-12 h-12 mr-2" />
+            
 
             <h1 className="text-3xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
             StyloEFX
